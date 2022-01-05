@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> While/Do while Javascript</title>
+</head>
+
+<body>
+    <script>
+        // Vong lặp while
+        function hello() {
+            var i = 0;
+            while (i < 10) {
+                console.log("Hello" + " " + i);
+                i++;
+            }
+            console.log("End");
+
+        }
+        hello();
+
+        function giaiThua(n) {
+            if (n <= 0) {
+                console.log("n!=1");
+            } else {
+                var tich = 1;
+                var i = 1;
+                while (i < n) {
+                    tich *= i;
+                    i++;
+                }
+                console.log("n!=" + tich);
+            }
+        }
+        giaiThua(10);
+
+        function helloDoWhile() {
+            var i = 0;
+            do {
+
+                console.log("Hello" + " " + i);
+                i++;
+                if (i == 5) {
+                    break;
+                }
+            } while (i < 10)
+            console.log("End");
+        }
+        helloDoWhile();
+    </script>
+</body>
+
+</html>
