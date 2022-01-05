@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Function Javascript</title>
+</head>
+
+<body>
+    <script>
+        // Function of Js
+        function sum(x, y) {
+            var sum = x + y;
+            console.log(sum);
+            return sum;
+
+        }
+        sum(10, 5) // x= 10; y = 5;
+        var result = sum(10, 10);
+        console.log("Result of sum :" + result);
+
+        // Cách khai báo 2 
+        var hieu = function(x, y) {
+            return x - y;
+        }
+        console.log(typeof(hieu));
+        console.log(hieu(20, 10));
+
+        var functionSum = sum;
+        console.log(functionSum(2, 4));
+
+        function counter() {
+            var i = 0;
+            i++;
+            console.log(i);
+        }
+        counter();
+    </script>
+</body>
+
+</html>
