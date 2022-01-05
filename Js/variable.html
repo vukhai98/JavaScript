@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Variable Javascript</title>
+</head>
+
+<body>
+    <script>
+        var x = 10;
+        var y = 20;
+        var k = 1,
+            l = 2,
+            n = 3;
+        console.log(x);
+        // Variable trong JS ko phân biệt kiểu dữ liệu của biến , mà dự  vào khai báo để xđ kiểu dữ liệu cuản biến
+        var s = "Hello";
+        console.log(typeof(s));
+        console.log(s);
+        var s = 10.5;
+        console.log(s);
+        var z; // underfined khi chưa  gán giá trị
+        console.log(typeof(z));
+        var z = 20;
+        console.log(z);
+
+        check = true;
+        console.log("Check 1:" + check);
+        check = (z == undefined);
+        console.log("Check 2:" + check);
+
+        var sum = x + y;
+        console.log("Sum of two number:" + " " + sum);
+
+        var str1 = " Study ";
+        var str2 = "JavaScript";
+        console.log(str1 + str2 + " " + sum);
+
+        var tich = x * y;
+        var thuong = x / y;
+        var phanDu = x % y;
+        console.log(tich + ":" + thuong + ":" + phanDu);
+    </script>
+</body>
+
+</html>
