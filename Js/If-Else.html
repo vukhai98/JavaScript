@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> If-Else Javascript</title>
+</head>
+
+<body>
+    <script>
+        // Định nghĩa hàm
+        function checkNumber(n) {
+            if (n == 0) {
+                console.log("n la so 0");
+            } else if (n > 0) {
+                console.log("n so duong");
+            } else {
+                console.log("n la so am");
+            }
+        }
+
+        function kiemTraSoChiaHet(a) {
+            if (a > 0 & a % 2 == 0) {
+                console.log(a + " la so duong");
+                console.log(a + "la so chan");
+            } else if (a < 0) {
+                console.log(a + " la so am");
+
+            } else {
+                console.log(a + " la so duong");
+                console.log(a + " la so le")
+            }
+        }
+        // Gọi hàm
+        checkNumber(-50);
+        checkNumber(0);
+        checkNumber(10);
+        kiemTraSoChiaHet(-9)
+    </script>
+</body>
+
+</html>
