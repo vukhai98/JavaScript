@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> String Javascript</title>
+</head>
+
+<body>
+    <script>
+        var s = " Hello Javascript. It is easy !";
+        console.log(s);
+        var s2 = "Javascript is ES"
+        var s3 = s + s2;
+        var s4 = s.concat(s2);
+        console.log(s3);
+        console.log(s4);
+        console.log(s4.length);
+
+        // tìm kiếm 
+        var index = s.indexOf("Easy"); // -1 not found;
+        console.log(index);
+
+        ///
+        var substr1 = s.substr(1, 10);
+        console.log(substr1);
+        var substr2 = s.substring(1, 5); // tương tự splice()
+        console.log(substr2);
+        // convert string  => Array
+        var arrayStr = s.split(".");
+        for (i = 0; i < arrayStr.length; i++) {
+            console.log(arrayStr[i]);
+        }
+        // replace 
+        var sReplace = s.replace("easy", "not difficult.");
+        console.log(sReplace);
+    </script>
+</body>
+
+</html>

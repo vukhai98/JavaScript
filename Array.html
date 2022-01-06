@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Array Javascript</title>
+</head>
+
+<body>
+    <script>
+        var number = [1, 2, 3, 4];
+        console.log(number[0]);
+        console.log(number[number.length - 1]);
+        var sum = number[0] + number[1] + number[2] + number[3]
+        console.log(sum);
+        for (var i = 0; i < number.length; i++) {
+            sum += number[i];
+        }
+        console.log(typeof(number));
+        // mốt số hàm dùng với array
+        number.sort(function compare(a, b) {
+            return a - b;
+        })
+        for (i = 0; i < number.length; i++) {
+            console.log(number[i]);
+        }
+        // add 1 phần tử  vào mảng 
+        number.push(5);
+        // xóa phần tử cuối cùng của mảng
+        number.pop();
+        // xóa phần tử đầu tiên của mảng
+        number.shift();
+        var numberConcat = number.concat([6, 7, 8]);
+        for (i = 0; i < numberConcat.length; i++) {
+            console.log(numberConcat[i]);
+        }
+        // xóa phần tử ở vị trí  index bất bì
+        number.splice(1, 2);
+        console.log("----------------")
+        for (i = 0; i < number.length; i++) {
+            console.log(number[i]);
+        }
+    </script>
+</body>
+
+</html>

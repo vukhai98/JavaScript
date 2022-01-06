@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Object Javascript</title>
+</head>
+
+<body>
+    <script>
+        var studentA = {
+            name: "Kante",
+            age: 20,
+            address: "Ha Noi",
+            talk: function() {
+                return this.name + " talk about" + this.address + "age" + this.age
+            }
+        }
+        console.log(studentA.name + " : " + studentA.address + " : " + studentA.age);
+        console.log(studentA.talk());
+
+        var studentB = {
+            name: "Mount",
+            age: 30,
+            address: "Lon Don",
+            talk: function() {
+                return this.name + " talk about :" + this.address + " age :" + this.age
+            }
+        }
+        console.log(studentB);
+        // thêm 1 thuộc tính của đối tượng
+        studentA.school = " Univercity Ha Noi";
+        studentB.homtown = "England";
+        console.log(studentB.homtown + " " + studentA.school);
+        studentB.work = function() {
+            console.log(this.name + " " + "  work at " + this.homtown);
+        }
+        studentB.work();
+
+        // cách 2 để tạo 1 dối tượng 
+        var studentC = new Object();
+        studentC.name = "Drogba";
+        studentC.age = 38;
+        studentC.homtown = "Copham";
+        studentC.talk = function() {
+            console.log(" My name is " + this.name);
+        }
+        studentC.talk();
+
+        var personD = {
+            name: "D",
+            setName: function(v) {
+                this.name = v;
+            },
+            set setName2(v) {
+                this.name = v;
+            },
+            getName: function() {
+                return this.name
+            },
+            get getName2() {
+                return this.name;
+            }
+        }
+        console.log(personD.name);
+
+        personD.setName("D1");
+        console.log(personD.name);
+
+        personD.setName2 = "D2";
+        console.log(personD.name);
+
+        console.log(personD.getName());
+        console.log(personD.getName2);
+    </script>
+</body>
+
+</html>
