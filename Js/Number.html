@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Number Javascript</title>
+</head>
+
+<body>
+    <script>
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_VALUE);
+
+        var x = 6;
+        var y = 4;
+        var sum = x + y;
+        console.log(sum);
+
+        // cộng 2 số thực
+        var z = 6.5
+        var sum1 = y + z;
+        console.log(sum1);
+        // cộng string với number
+        var a = "10";
+        var str = a + x; // string cộng số thì ra chuỗi string
+        console.log(str);
+        var b = a - x; // đối với các phép toán khác thì string tự convert về số để thực hiện .
+
+        var n = NaN; // not a number
+        var s3 = x / "ABC";
+        console.log("----------------" + s3);
+        var check = isNaN(a);
+        console.log(check);
+
+        var k = Infinity;
+        var thuong = 2 / 0;
+        console.log("thuong" + thuong);
+
+        console.log(typeof(Infinity));
+        console.log(typeof(NaN));
+
+        var number = new Number(10);
+        var m = 10;
+        if (m == number) {
+            console.log("bang nhau");
+        } else if (m === number) {
+            console.log("_bang nhau");
+        } else {
+            console.log(" khac nhau")
+        }
+
+        var soPi = Math.PI; // số pi
+        var canBac2 = Math.sqrt(9);
+
+        var i = parseInt("10 10 10");
+        console.log(i);
+        var l = parseFloat("10.1 ABC");
+        console.log(l);
+    </script>
+</body>
+
+</html>
