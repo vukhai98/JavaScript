@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Date Javascript</title>
+</head>
+
+<body>
+    <script>
+        var now = new Date();
+        console.log(now);
+        // cac hàm get của date
+        console.log(now.getDay() + ":" + now.getMonth() + ":" + now.getUTCFullYear());
+        // hàm set
+        now.setFullYear(2021);
+        console.log(now);
+        // hàm cộng ngày
+        now.setFullYear(2022);
+        now.setDate(now.getDate() + 5);
+        console.log(now);
+
+        console.log(typeof(now));
+        var date = new Date(1998, 08, 27);
+        console.log(date);
+    </script>
+</body>
+
+</html>

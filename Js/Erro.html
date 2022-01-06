@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Error Javascript</title>
+</head>
+
+<body>
+    <script>
+        function phepChia(x, y) {
+            if (y == 0) {
+                throw "Mau so  y khong the = 0";
+            }
+            return x / y;
+        }
+        try {
+            var result = phepChia(10, 4);
+            console.log(result);
+        } catch (error) {
+            console.log("Phep chia khong ton tại");
+
+        } finally {
+            console.log("Finally");
+        }
+    </script>
+</body>
+
+</html>

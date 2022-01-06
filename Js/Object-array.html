@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Object-Array Javascript</title>
+</head>
+
+<body>
+    <script>
+        var personList = [{
+            id: 1,
+            name: " Kante",
+            age: 30
+        }, {
+            id: 2,
+            name: "Mount",
+            age: 22
+        }];
+        for (let i = 0; i < personList.length; i++) {
+            let person = personList[i];
+            for (var k in person) {
+                console.log(person[k]);
+            }
+        }
+        let j = {
+            id: 3,
+            name: "James",
+            age: 21
+        };
+        personList.push(j);
+        console.log(personList.length);
+        console.log(personList[personList.length - 1].name);
+    </script>
+</body>
+
+</html>

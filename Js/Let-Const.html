@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Let-Const Javascript</title>
+</head>
+
+<body>
+    <script>
+        // sử dụng use strict để code theo đúng qui tắc
+        "use strict";
+        const PI = 3.14;
+
+        function sum(x, y) {
+            var sum = PI + x + y; //x và y là variable local  chỉ sử dụng được trong hàm sum 
+            // PI = 3 không thể  thay đổi đối giá trị của hàng số 
+            return sum;
+        }
+        console.log(sum(1, 5.86));
+
+        const person = {
+            name: "A",
+            age: 23
+        }
+        person.name = "Vũ Minh Khải";
+        console.log(person.name);
+
+        // Từ khóa let giúp khai báo biến là duy nhất và ko cho phép biên nào được trùng tên 
+        function Loop() {
+            var i = 98;
+            for (let i = 0; i < 5; i++) {
+                console.log(i);
+            }
+            console.log("glocal:" + i);
+        }
+        Loop();
+    </script>
+</body>
+
+</html>
