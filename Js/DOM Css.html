@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> DOM Css Javascript</title>
+</head>
+<style>
+    .center {
+        text-align: center;
+    }
+    
+    .fontStyle {
+        font-style: italic;
+        color: blue;
+    }
+</style>
+
+<body>
+    <a href="">Home</a>
+    <a href="">Home</a>
+
+    <p>Copyright JavaMaster</p>
+    <script>
+        let aList = document.getElementsByTagName("a");
+        for (let i = 0; i < aList.length; i++) {
+            aList[i].style.color = "red";
+            aList[i].style.fontSize = "20px";
+        }
+        let pList = document.getElementsByTagName("p");
+        //pList[0].classList = "center fontStyle" // có thể thêm nhiều class css vào
+        //pList[0].className = "center fontStyle" // chỉ có thể thêm string
+        pList[0].setAttribute("class", "center fontStyle");
+    </script>
+</body>
+
+</html>
