@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> Json Javascript</title>
+</head>
+
+<body>
+    <script>
+        /*
+                                                                                - JSON : Javascript Object Notation
+                                                                                - JSON là một định dạng dữ liệu dạng text lưu trữ và trao đổi nền tảng
+                                                                                - Định dạng nhẹ , độc lập, dễ hiểu , tự mô tả.
+                                                                                - Sử dụng rộng rãi cho web, cho app, loT
+                                                                                */
+        var person = {
+                id: 1,
+                name: "A",
+                age: 30
+            }
+            // Covert 1 đối tượng từ  object sang json
+        let jsonStr = JSON.stringify(person);
+
+        console.log(jsonStr);
+        console.log(person);
+        // conver 1 doi tuong từ json sang đối tượng
+        let p = JSON.parse(jsonStr);
+        console.log(p.age);
+
+        // mảng 
+        let arrayPerson = [{
+            id: 1,
+            name: "A"
+        }, {
+            id: 2,
+            name: "B"
+        }]
+
+        console.log(JSON.stringify(arrayPerson));
+
+        var person2 = person; // tảo ra 1 đối tượng mới nhưng có chung ô nhớ với person
+        person2.name = "P2";
+        console.log(person.name); // khi thay đổi thuộc tính name của p2 thì p cũng chịu ảnh hưởng vì có cùng ô nhớ
+
+        // clone - coppy
+        // conver 1 object sang 1 đối tượng  sang Json rồi lại convert lại ob để tạo ra 1 đối tượng khác và có vùng nhớ khác
+
+        person2 = JSON.parse(JSON.stringify(person));
+        console.log(person2);
+        person2.name = "P2";
+        person.name = "A";
+        console.log(person2.name);
+        console.log(person.name);
+    </script>
+</body>
+
+</html>
