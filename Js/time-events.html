@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title>Time Event Javascript </title>
+
+</head>
+
+<body>
+    <button type="button" onclick="stopSetTimeout()">Stop Timeout</button>
+    <button type="button" onclick=" stopSetInterval()"> StopSetInterval</button>
+    <script>
+        //settimeout
+        window.setTimeout(function() {
+            console.log("Goi vao day");
+        }, 5000)
+
+        function hello() {
+            console.log("Hello World");
+        }
+        let timeout = setTimeout(hello, 10000);
+
+        function stopSetTimeout() {
+            clearTimeout(timeout);
+        }
+        //set interval
+        let interval = setInterval(function() {
+            console.log(new Date().toUTCString())
+        }, 2000);
+
+        function stopSetInterval() {
+            clearTimeout(interval);
+        }
+    </script>
+</body>
+
+</html>

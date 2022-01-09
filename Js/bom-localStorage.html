@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title>LocalStorage Javascript </title>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        // set dữ liệu vào 
+        localStorage.setItem("userName", "Center JavaScripts");
+
+        let userName = localStorage.getItem("userName");
+        console.log(userName)
+        document.getElementById("root").innerHTML = userName;
+
+        // lưu đối tượng js vào localStorage
+        let user = {
+            id: 1,
+            name: "Mason Mount",
+            age: 20,
+            address: "London, England"
+        }
+        localStorage.setItem("user", JSON.stringify(user))
+            // đọc ra
+        const u = localStorage.getItem("user")
+        if (u) {
+            const uObject = JSON.parse(u);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title>Funtion Clousure </title>
+    <!--Clousure Function là có thể gọi 1 hàm ở trong 1 hàm và trả về 1 hàm -->
+</head>
+
+<body>
+    <script>
+        function tong(x, y) {
+            return x + y;
+        }
+
+        function hieu(x, y) {
+            return x - y;
+        }
+
+        function tinhToan(call) {
+            var kq = call(10, 5);
+            console.log("Result:" + kq);
+        }
+        tinhToan(tong) //call= tong
+        tinhToan(hieu) // call= hieu
+    </script>
+</body>
+
+</html>

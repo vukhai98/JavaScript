@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title>Funtion Clousure </title>
+    <!--Clousure Function là có thể gọi 1 hàm ở trong 1 hàm và trả về 1 hàm -->>
+</head>
+
+<body>
+    <script>
+        function counter() {
+            var count = 0;
+
+            function setUp() {
+                count++;
+                return count;
+            }
+            return setUp;
+        }
+        var up = counter();
+        console.log(typeof(up));
+
+        console.log(up());
+        console.log(up());
+        console.log(up());
+    </script>
+</body>
+
+</html>
