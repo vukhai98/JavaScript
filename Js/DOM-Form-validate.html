@@ -24,6 +24,17 @@
                 <label>Address:</label>
                 <input type="text" id="address" value="" />
             </div>
+            <div>
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="M" />Nam
+                <input type="radio" id="female" name="gender" value="F">Nu
+            </div>
+            <div id="male-div" style="display:none">
+                <p>Ban chon la nam</p>
+            </div>
+            <div id="female-div" style="display:none">
+                <p>Ban chon la nu</p>
+            </div>
 
             <buttonn type="button" id="sumbit-btn">Add</button>
 
@@ -35,6 +46,27 @@
         let usernameElement = document.getElementById("username");
         let passwordElement = document.getElementById("password");
         let addressElement = document.getElementById("address");
+
+        let maleElementRadio = document.getElementById("male");
+        let famaleElemenRadio = document.getElementById("female");
+        let femaleElementDiv = document.getElementById("female-div");
+        let maleElementDiv = document.getElementById("male-div");
+
+
+        maleElementRadio.onchange = function() {
+            if (this.checked) {
+                maleElementDiv.style.display = "block";
+                femaleElementDiv.style.display = "none";
+            }
+        }
+
+        famaleElemenRadio.onchange = function() {
+            if (this.checked) {
+                maleElementDiv.style.display = "none";
+                femaleElementDiv.style.display = "block";
+            }
+        }
+
 
         sumbitBtn.onclick = function() {
 
