@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title> DOM Node Javascript</title>
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>Copyright JavaMaster</p>
+    </div>
+    <script>
+        let ulElement = document.getElementById("header").firstElementChild;
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.href = "https://javamaster.net";
+        a.innerHTML = "Java Master Blog";
+        li.appendChild(a)
+
+        //ulElement.appendChild(li); //  thêm thẻ li vào cuối element Ul
+        // thêm thẻ li là thẻ first của ul
+        //ulElement.prepend(li);
+        let liFirst = ulElement.firstElementChild;
+        console.log(liFirst);
+        // thay thế li bằng liFirst
+        ulElement.replaceChild(li, liFirst);
+        // xóa 1 element
+        ulElement.removeChild(li);
+    </script>
+</body>
+
+</html>
