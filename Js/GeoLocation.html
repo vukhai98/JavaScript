@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title>Geo Location Javascript </title>
+
+</head>
+
+<body>
+    <button onclick="openMap()">OpenMap</button>
+    <script>
+        let coords = {};
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log(position.coords);
+            coords = position.coords;
+        }, function(err) {
+            console.log(err);
+        })
+
+        function openMap() {
+            location.href = "https://www.google.com/maps/@" + coords.latitude + "," + coords.longitude
+        }
+    </script>
+</body>
+
+</html>

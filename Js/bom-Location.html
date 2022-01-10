@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Study Javascript Basic">
+    <title>Js Location Javascript </title>
+
+</head>
+
+<body>
+    <button onclick="reload()">F5</button>
+    <button onclick="openNewWeb('https://trungtamjava.com')">Next Web</button>
+    <script>
+        function reload() {
+            location.reload();
+        }
+
+        function openNewWeb(url) {
+            location.href = url;
+        }
+        console.log(location.pathname);
+    </script>
+</body>
+
+</html>
